@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Varela Round', 'Inter', Arial, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 220 25% 97%; /* #F5F7FA - Page background */
+    --foreground: 220 15% 25%; /* #363C47 - Main text */
+    
+    --card: 0 0% 100%; /* #FFFFFF - Card background (e.g., active nav item) */
+    --card-foreground: 217 91% 60%; /* #3B82F6 - Text on card (active nav item text) */
+    
+    --popover: 0 0% 100%; /* #FFFFFF */
+    --popover-foreground: 220 15% 25%; /* #363C47 */
+    
+    --primary: 217 91% 60%; /* #3B82F6 - Main interactive blue for logo, active text */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF - White text, e.g. on primary buttons or GIGFLOWW logo text */
+    
+    --secondary: 222 62% 87%; /* #CCD7F0 - Header background, light blue */
+    --secondary-foreground: 220 15% 45%; /* #606878 - Inactive nav text on header */
+    
+    --muted: 220 14% 90%; /* #E2E5E9 - Light grey for borders, muted backgrounds */
+    --muted-foreground: 215 14% 47%; /* #6B7280 - Medium grey for muted text */
+    
+    --accent: 217 91% 55%; /* #2563EB - Slightly darker blue for hover/accent states */
+    --accent-foreground: 0 0% 100%; /* #FFFFFF */
+    
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 219 13% 83%; /* #CBD2D9 - Default border color, vertical separator in header */
+    --input: 220 14% 93%; /* #EAECEF - Input background */
+    --ring: 217 91% 60%; /* Focus ring, same as primary */
+
+    --chart-1: 217 91% 60%; /* Primary blue */
+    --chart-2: 200 80% 60%; /* A cyan-like blue */
+    --chart-3: 280 70% 65%; /* A purple */
+    --chart-4: 30 80% 60%; /* An orange */
+    --chart-5: 120 50% 55%; /* A green */
+    --radius: 0.5rem;
+
+    /* Sidebar Colors (not used in new design, but kept for completeness if needed elsewhere) */
+    --sidebar-background: 270 5% 92%;
+    --sidebar-foreground: 270 10% 30%;
+    --sidebar-primary: 270 11.1% 55.1%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 282.9 21.2% 78.6%;
+    --sidebar-accent-foreground: 270 11% 35%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 270 11.1% 55.1%;
+
+    /* Custom badge colors */
+    --success-badge-background: 145 73% 90%; /* light green for "Paid" / "Active" */
+    --success-badge-foreground: 150 58% 30%; /* darker green text */
+    --destructive-badge-background: 0 84% 92%; /* light red for "Inactive" */
+    --destructive-badge-foreground: 347 77% 38%; /* darker red text */
+    --pending-badge-background: 220 20% 92%; /* light grey for "Pending" */
+    --pending-badge-foreground: 220 10% 45%; /* darker grey text for "Pending" */
+  }
+
+  .dark {
+    /* Define dark theme variables if needed, for now keeping it light-themed based on image */
+    --background: 220 15% 15%; /* #1F242E */
+    --foreground: 220 15% 85%; /* #D0D4DB */
+    
+    --card: 220 15% 20%; /* #2A303A */
+    --card-foreground: 217 91% 65%; /* Brighter blue for dark mode */
+    
+    --popover: 220 15% 20%;
+    --popover-foreground: 220 15% 85%;
+    
+    --primary: 217 91% 65%; /* Brighter blue */
+    --primary-foreground: 220 15% 10%; /* Darker text for primary buttons */
+    
+    --secondary: 222 30% 25%; /* Darker light blue for header */
+    --secondary-foreground: 220 15% 70%; /* Lighter muted text */
+    
+    --muted: 220 15% 25%;
+    --muted-foreground: 220 10% 60%;
+    
+    --accent: 217 91% 70%; /* Even brighter blue for accent */
+    --accent-foreground: 220 15% 10%;
+    
+    --border: 220 15% 30%; /* #3D4452 */
+    --input: 220 15% 30%;
+    --ring: 217 91% 70%;
+
+    --chart-1: 217 70% 65%;
+    --chart-2: 200 70% 65%;
+    --chart-3: 280 60% 70%;
+    --chart-4: 30 70% 65%;
+    --chart-5: 120 40% 60%;
+
+    --success-badge-background: 145 63% 25%; 
+    --success-badge-foreground: 145 63% 85%; 
+    --destructive-badge-background: 0 84% 25%; 
+    --destructive-badge-foreground: 0 84% 85%;
+    --pending-badge-background: 220 10% 30%; /* darker grey for dark mode "Pending" */
+    --pending-badge-foreground: 220 10% 70%; /* lighter grey text for dark mode "Pending" */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
